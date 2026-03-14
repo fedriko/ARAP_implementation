@@ -1,0 +1,14 @@
+# Target labels
+ libigl-populate
+# Source files and their labels
+C:/Users/federico/My project (3)/ARAP_implementation/build/_deps/libigl-subbuild/CMakeFiles/libigl-populate
+C:/Users/federico/My project (3)/ARAP_implementation/build/_deps/libigl-subbuild/CMakeFiles/a9b94619d40cd29c1b266d602774c554/libigl-populate.rule
+C:/Users/federico/My project (3)/ARAP_implementation/build/_deps/libigl-subbuild/CMakeFiles/c2990be8b77740f59d5480557c242b64/libigl-populate-complete.rule
+C:/Users/federico/My project (3)/ARAP_implementation/build/_deps/libigl-subbuild/CMakeFiles/13cb909c1edfa9b7d9f075c288f97a02/libigl-populate-build.rule
+C:/Users/federico/My project (3)/ARAP_implementation/build/_deps/libigl-subbuild/CMakeFiles/13cb909c1edfa9b7d9f075c288f97a02/libigl-populate-configure.rule
+C:/Users/federico/My project (3)/ARAP_implementation/build/_deps/libigl-subbuild/CMakeFiles/13cb909c1edfa9b7d9f075c288f97a02/libigl-populate-download.rule
+C:/Users/federico/My project (3)/ARAP_implementation/build/_deps/libigl-subbuild/CMakeFiles/13cb909c1edfa9b7d9f075c288f97a02/libigl-populate-install.rule
+C:/Users/federico/My project (3)/ARAP_implementation/build/_deps/libigl-subbuild/CMakeFiles/13cb909c1edfa9b7d9f075c288f97a02/libigl-populate-mkdir.rule
+C:/Users/federico/My project (3)/ARAP_implementation/build/_deps/libigl-subbuild/CMakeFiles/13cb909c1edfa9b7d9f075c288f97a02/libigl-populate-patch.rule
+C:/Users/federico/My project (3)/ARAP_implementation/build/_deps/libigl-subbuild/CMakeFiles/13cb909c1edfa9b7d9f075c288f97a02/libigl-populate-test.rule
+C:/Users/federico/My project (3)/ARAP_implementation/build/_deps/libigl-subbuild/CMakeFiles/13cb909c1edfa9b7d9f075c288f97a02/libigl-populate-update.rule

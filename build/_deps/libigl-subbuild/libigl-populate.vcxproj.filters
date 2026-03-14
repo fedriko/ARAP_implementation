@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\federico\My project (3)\ARAP_implementation\build\_deps\libigl-subbuild\CMakeFiles\13cb909c1edfa9b7d9f075c288f97a02\libigl-populate-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\federico\My project (3)\ARAP_implementation\build\_deps\libigl-subbuild\CMakeFiles\13cb909c1edfa9b7d9f075c288f97a02\libigl-populate-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\federico\My project (3)\ARAP_implementation\build\_deps\libigl-subbuild\CMakeFiles\13cb909c1edfa9b7d9f075c288f97a02\libigl-populate-update.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\federico\My project (3)\ARAP_implementation\build\_deps\libigl-subbuild\CMakeFiles\13cb909c1edfa9b7d9f075c288f97a02\libigl-populate-patch.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\federico\My project (3)\ARAP_implementation\build\_deps\libigl-subbuild\CMakeFiles\13cb909c1edfa9b7d9f075c288f97a02\libigl-populate-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\federico\My project (3)\ARAP_implementation\build\_deps\libigl-subbuild\CMakeFiles\13cb909c1edfa9b7d9f075c288f97a02\libigl-populate-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\federico\My project (3)\ARAP_implementation\build\_deps\libigl-subbuild\CMakeFiles\13cb909c1edfa9b7d9f075c288f97a02\libigl-populate-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\federico\My project (3)\ARAP_implementation\build\_deps\libigl-subbuild\CMakeFiles\13cb909c1edfa9b7d9f075c288f97a02\libigl-populate-test.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\federico\My project (3)\ARAP_implementation\build\_deps\libigl-subbuild\CMakeFiles\c2990be8b77740f59d5480557c242b64\libigl-populate-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\federico\My project (3)\ARAP_implementation\build\_deps\libigl-subbuild\CMakeFiles\a9b94619d40cd29c1b266d602774c554\libigl-populate.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\federico\My project (3)\ARAP_implementation\build\_deps\libigl-subbuild\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\federico\My project (3)\ARAP_implementation\build\_deps\libigl-subbuild\CMakeFiles\libigl-populate" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{664B812D-FA9C-3D34-ADD0-7B7B9547498E}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
