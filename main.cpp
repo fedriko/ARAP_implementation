@@ -1,12 +1,12 @@
 #include <Eigen/Eigen> 
-void main(){
-    Eigen::MatrixXd V;
-    Eigen::MatrixXi F;
-    Eigen::SparseMatrix<double> weights;
+Eigen::SparseMatrix<double>  constructLaplace(Eigen::SparseMatrix<double> w){
+   Eigen::VectorXd sums = W_sparse * Eigen::VectorXd::Ones(W_sparse.cols());
+   Eigen::SparseMatrix<double> D_sparse = sums.asDiagonal();
+   return D_sparse - w;
     
 }
 
-Eigen::SparseMatrix<double> weights(const Eigen::MatrixXd & V,const Eigen::MatrixXi & F ){
+Eigen::SparseMatrix<double> constructWeights(const Eigen::MatrixXd & V,const Eigen::MatrixXi & F ){
 
     int n = V.rows();
     int f = F.rows();
@@ -41,4 +41,12 @@ Eigen::SparseMatrix<double> weights(const Eigen::MatrixXd & V,const Eigen::Matri
     }
     W.setFromTriplets(triplets.begin(), triplets.end()); 
     return W;
+}
+
+void main(){
+    Eigen::MatrixXd V;
+    Eigen::MatrixXi F;
+    Eigen::SparseMatrix<double> weights = ; constructWeights(V,F);
+    
+    
 }
