@@ -1,6 +1,6 @@
-^C:\USERS\FEDERICO\MY PROJECT (3)\ARAP_IMPLEMENTATION\BUILD\_DEPS\LIBIGL-SUBBUILD\CMAKEFILES\A9B94619D40CD29C1B266D602774C554\GENERATE.STAMP.RULE
+^C:\USERS\FEDEB\DOCUMENTS\GITHUB\ARAP_IMPLEMENTATION\BUILD\_DEPS\LIBIGL-SUBBUILD\CMAKEFILES\A1A945B4486B71A76C43F5FAD4C4834E\GENERATE.STAMP.RULE
 setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" "-SC:/Users/federico/My project (3)/ARAP_implementation/build/_deps/libigl-subbuild" "-BC:/Users/federico/My project (3)/ARAP_implementation/build/_deps/libigl-subbuild" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/federico/My project (3)/ARAP_implementation/build/_deps/libigl-subbuild/libigl-populate.sln"
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/fedeb/Documents/GitHub/ARAP_implementation/build/_deps/libigl-subbuild -BC:/Users/fedeb/Documents/GitHub/ARAP_implementation/build/_deps/libigl-subbuild --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/fedeb/Documents/GitHub/ARAP_implementation/build/_deps/libigl-subbuild/libigl-populate.sln
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

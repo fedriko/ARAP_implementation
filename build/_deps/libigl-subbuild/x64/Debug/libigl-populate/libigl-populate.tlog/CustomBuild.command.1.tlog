@@ -1,8 +1,8 @@
-^C:\USERS\FEDERICO\MY PROJECT (3)\ARAP_IMPLEMENTATION\BUILD\_DEPS\LIBIGL-SUBBUILD\CMAKEFILES\13CB909C1EDFA9B7D9F075C288F97A02\LIBIGL-POPULATE-MKDIR.RULE
+^C:\USERS\FEDEB\DOCUMENTS\GITHUB\ARAP_IMPLEMENTATION\BUILD\_DEPS\LIBIGL-SUBBUILD\CMAKEFILES\97920C6DAD54D7E2BD41A797013135E4\LIBIGL-POPULATE-MKDIR.RULE
 setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -Dcfgdir=/Debug -P "C:/Users/federico/My project (3)/ARAP_implementation/build/_deps/libigl-subbuild/libigl-populate-prefix/tmp/libigl-populate-mkdirs.cmake"
+"C:\Program Files\CMake\bin\cmake.exe" -Dcfgdir=/Debug -P C:/Users/fedeb/Documents/GitHub/ARAP_implementation/build/_deps/libigl-subbuild/libigl-populate-prefix/tmp/libigl-populate-mkdirs.cmake
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch "C:/Users/federico/My project (3)/ARAP_implementation/build/_deps/libigl-subbuild/libigl-populate-prefix/src/libigl-populate-stamp/Debug/libigl-populate-mkdir"
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/fedeb/Documents/GitHub/ARAP_implementation/build/_deps/libigl-subbuild/libigl-populate-prefix/src/libigl-populate-stamp/Debug/libigl-populate-mkdir
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
@@ -10,15 +10,15 @@ endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
-^C:\USERS\FEDERICO\MY PROJECT (3)\ARAP_IMPLEMENTATION\BUILD\_DEPS\LIBIGL-SUBBUILD\CMAKEFILES\13CB909C1EDFA9B7D9F075C288F97A02\LIBIGL-POPULATE-DOWNLOAD.RULE
+^C:\USERS\FEDEB\DOCUMENTS\GITHUB\ARAP_IMPLEMENTATION\BUILD\_DEPS\LIBIGL-SUBBUILD\CMAKEFILES\97920C6DAD54D7E2BD41A797013135E4\LIBIGL-POPULATE-DOWNLOAD.RULE
 setlocal
-cd "C:\Users\federico\My project (3)\ARAP_implementation\build\_deps"
+cd C:\Users\fedeb\Documents\GitHub\ARAP_implementation\build\_deps
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P "C:/Users/federico/My project (3)/ARAP_implementation/build/_deps/libigl-subbuild/libigl-populate-prefix/tmp/libigl-populate-gitclone.cmake"
+"C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P C:/Users/fedeb/Documents/GitHub/ARAP_implementation/build/_deps/libigl-subbuild/libigl-populate-prefix/tmp/libigl-populate-gitclone.cmake
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch "C:/Users/federico/My project (3)/ARAP_implementation/build/_deps/libigl-subbuild/libigl-populate-prefix/src/libigl-populate-stamp/Debug/libigl-populate-download"
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/fedeb/Documents/GitHub/ARAP_implementation/build/_deps/libigl-subbuild/libigl-populate-prefix/src/libigl-populate-stamp/Debug/libigl-populate-download
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
@@ -26,13 +26,13 @@ endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
-^C:\USERS\FEDERICO\MY PROJECT (3)\ARAP_IMPLEMENTATION\BUILD\_DEPS\LIBIGL-SUBBUILD\CMAKEFILES\13CB909C1EDFA9B7D9F075C288F97A02\LIBIGL-POPULATE-UPDATE.RULE
+^C:\USERS\FEDEB\DOCUMENTS\GITHUB\ARAP_IMPLEMENTATION\BUILD\_DEPS\LIBIGL-SUBBUILD\CMAKEFILES\97920C6DAD54D7E2BD41A797013135E4\LIBIGL-POPULATE-UPDATE.RULE
 setlocal
-cd "C:\Users\federico\My project (3)\ARAP_implementation\build\_deps\libigl-src"
+cd C:\Users\fedeb\Documents\GitHub\ARAP_implementation\build\_deps\libigl-src
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -Dcan_fetch=YES -P "C:/Users/federico/My project (3)/ARAP_implementation/build/_deps/libigl-subbuild/libigl-populate-prefix/tmp/libigl-populate-gitupdate.cmake"
+"C:\Program Files\CMake\bin\cmake.exe" -Dcan_fetch=YES -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P C:/Users/fedeb/Documents/GitHub/ARAP_implementation/build/_deps/libigl-subbuild/libigl-populate-prefix/tmp/libigl-populate-gitupdate.cmake
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
@@ -40,11 +40,11 @@ endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
-^C:\USERS\FEDERICO\MY PROJECT (3)\ARAP_IMPLEMENTATION\BUILD\_DEPS\LIBIGL-SUBBUILD\CMAKEFILES\13CB909C1EDFA9B7D9F075C288F97A02\LIBIGL-POPULATE-PATCH.RULE
+^C:\USERS\FEDEB\DOCUMENTS\GITHUB\ARAP_IMPLEMENTATION\BUILD\_DEPS\LIBIGL-SUBBUILD\CMAKEFILES\97920C6DAD54D7E2BD41A797013135E4\LIBIGL-POPULATE-PATCH.RULE
 setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch "C:/Users/federico/My project (3)/ARAP_implementation/build/_deps/libigl-subbuild/libigl-populate-prefix/src/libigl-populate-stamp/Debug/libigl-populate-patch"
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/fedeb/Documents/GitHub/ARAP_implementation/build/_deps/libigl-subbuild/libigl-populate-prefix/src/libigl-populate-stamp/Debug/libigl-populate-patch
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
@@ -52,15 +52,15 @@ endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
-^C:\USERS\FEDERICO\MY PROJECT (3)\ARAP_IMPLEMENTATION\BUILD\_DEPS\LIBIGL-SUBBUILD\CMAKEFILES\13CB909C1EDFA9B7D9F075C288F97A02\LIBIGL-POPULATE-CONFIGURE.RULE
+^C:\USERS\FEDEB\DOCUMENTS\GITHUB\ARAP_IMPLEMENTATION\BUILD\_DEPS\LIBIGL-SUBBUILD\CMAKEFILES\97920C6DAD54D7E2BD41A797013135E4\LIBIGL-POPULATE-CONFIGURE.RULE
 setlocal
-cd "C:\Users\federico\My project (3)\ARAP_implementation\build\_deps\libigl-build"
+cd C:\Users\fedeb\Documents\GitHub\ARAP_implementation\build\_deps\libigl-build
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch "C:/Users/federico/My project (3)/ARAP_implementation/build/_deps/libigl-subbuild/libigl-populate-prefix/src/libigl-populate-stamp/Debug/libigl-populate-configure"
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/fedeb/Documents/GitHub/ARAP_implementation/build/_deps/libigl-subbuild/libigl-populate-prefix/src/libigl-populate-stamp/Debug/libigl-populate-configure
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
@@ -68,15 +68,15 @@ endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
-^C:\USERS\FEDERICO\MY PROJECT (3)\ARAP_IMPLEMENTATION\BUILD\_DEPS\LIBIGL-SUBBUILD\CMAKEFILES\13CB909C1EDFA9B7D9F075C288F97A02\LIBIGL-POPULATE-BUILD.RULE
+^C:\USERS\FEDEB\DOCUMENTS\GITHUB\ARAP_IMPLEMENTATION\BUILD\_DEPS\LIBIGL-SUBBUILD\CMAKEFILES\97920C6DAD54D7E2BD41A797013135E4\LIBIGL-POPULATE-BUILD.RULE
 setlocal
-cd "C:\Users\federico\My project (3)\ARAP_implementation\build\_deps\libigl-build"
+cd C:\Users\fedeb\Documents\GitHub\ARAP_implementation\build\_deps\libigl-build
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch "C:/Users/federico/My project (3)/ARAP_implementation/build/_deps/libigl-subbuild/libigl-populate-prefix/src/libigl-populate-stamp/Debug/libigl-populate-build"
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/fedeb/Documents/GitHub/ARAP_implementation/build/_deps/libigl-subbuild/libigl-populate-prefix/src/libigl-populate-stamp/Debug/libigl-populate-build
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
@@ -84,15 +84,15 @@ endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
-^C:\USERS\FEDERICO\MY PROJECT (3)\ARAP_IMPLEMENTATION\BUILD\_DEPS\LIBIGL-SUBBUILD\CMAKEFILES\13CB909C1EDFA9B7D9F075C288F97A02\LIBIGL-POPULATE-INSTALL.RULE
+^C:\USERS\FEDEB\DOCUMENTS\GITHUB\ARAP_IMPLEMENTATION\BUILD\_DEPS\LIBIGL-SUBBUILD\CMAKEFILES\97920C6DAD54D7E2BD41A797013135E4\LIBIGL-POPULATE-INSTALL.RULE
 setlocal
-cd "C:\Users\federico\My project (3)\ARAP_implementation\build\_deps\libigl-build"
+cd C:\Users\fedeb\Documents\GitHub\ARAP_implementation\build\_deps\libigl-build
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch "C:/Users/federico/My project (3)/ARAP_implementation/build/_deps/libigl-subbuild/libigl-populate-prefix/src/libigl-populate-stamp/Debug/libigl-populate-install"
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/fedeb/Documents/GitHub/ARAP_implementation/build/_deps/libigl-subbuild/libigl-populate-prefix/src/libigl-populate-stamp/Debug/libigl-populate-install
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
@@ -100,29 +100,15 @@ endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
-^C:\USERS\FEDERICO\MY PROJECT (3)\ARAP_IMPLEMENTATION\BUILD\_DEPS\LIBIGL-SUBBUILD\CMAKEFILES\13CB909C1EDFA9B7D9F075C288F97A02\LIBIGL-POPULATE-TEST.RULE
+^C:\USERS\FEDEB\DOCUMENTS\GITHUB\ARAP_IMPLEMENTATION\BUILD\_DEPS\LIBIGL-SUBBUILD\CMAKEFILES\97920C6DAD54D7E2BD41A797013135E4\LIBIGL-POPULATE-TEST.RULE
 setlocal
-cd "C:\Users\federico\My project (3)\ARAP_implementation\build\_deps\libigl-build"
+cd C:\Users\fedeb\Documents\GitHub\ARAP_implementation\build\_deps\libigl-build
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch "C:/Users/federico/My project (3)/ARAP_implementation/build/_deps/libigl-subbuild/libigl-populate-prefix/src/libigl-populate-stamp/Debug/libigl-populate-test"
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-^C:\USERS\FEDERICO\MY PROJECT (3)\ARAP_IMPLEMENTATION\BUILD\_DEPS\LIBIGL-SUBBUILD\CMAKEFILES\C2990BE8B77740F59D5480557C242B64\LIBIGL-POPULATE-COMPLETE.RULE
-setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory "C:/Users/federico/My project (3)/ARAP_implementation/build/_deps/libigl-subbuild/CMakeFiles/Debug"
-if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch "C:/Users/federico/My project (3)/ARAP_implementation/build/_deps/libigl-subbuild/CMakeFiles/Debug/libigl-populate-complete"
-if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch "C:/Users/federico/My project (3)/ARAP_implementation/build/_deps/libigl-subbuild/libigl-populate-prefix/src/libigl-populate-stamp/Debug/libigl-populate-done"
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/fedeb/Documents/GitHub/ARAP_implementation/build/_deps/libigl-subbuild/libigl-populate-prefix/src/libigl-populate-stamp/Debug/libigl-populate-test
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
@@ -130,7 +116,21 @@ endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
-^C:\USERS\FEDERICO\MY PROJECT (3)\ARAP_IMPLEMENTATION\BUILD\_DEPS\LIBIGL-SUBBUILD\CMAKEFILES\A9B94619D40CD29C1B266D602774C554\LIBIGL-POPULATE.RULE
+^C:\USERS\FEDEB\DOCUMENTS\GITHUB\ARAP_IMPLEMENTATION\BUILD\_DEPS\LIBIGL-SUBBUILD\CMAKEFILES\CE77E562B6AB1B861B6533A3A85A7E1C\LIBIGL-POPULATE-COMPLETE.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/Users/fedeb/Documents/GitHub/ARAP_implementation/build/_deps/libigl-subbuild/CMakeFiles/Debug
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/fedeb/Documents/GitHub/ARAP_implementation/build/_deps/libigl-subbuild/CMakeFiles/Debug/libigl-populate-complete
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/fedeb/Documents/GitHub/ARAP_implementation/build/_deps/libigl-subbuild/libigl-populate-prefix/src/libigl-populate-stamp/Debug/libigl-populate-done
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\FEDEB\DOCUMENTS\GITHUB\ARAP_IMPLEMENTATION\BUILD\_DEPS\LIBIGL-SUBBUILD\CMAKEFILES\A1A945B4486B71A76C43F5FAD4C4834E\LIBIGL-POPULATE.RULE
 setlocal
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
@@ -138,9 +138,9 @@ endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
-^C:\USERS\FEDERICO\MY PROJECT (3)\ARAP_IMPLEMENTATION\BUILD\_DEPS\LIBIGL-SUBBUILD\CMAKELISTS.TXT
+^C:\USERS\FEDEB\DOCUMENTS\GITHUB\ARAP_IMPLEMENTATION\BUILD\_DEPS\LIBIGL-SUBBUILD\CMAKELISTS.TXT
 setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" "-SC:/Users/federico/My project (3)/ARAP_implementation/build/_deps/libigl-subbuild" "-BC:/Users/federico/My project (3)/ARAP_implementation/build/_deps/libigl-subbuild" --check-stamp-file "C:/Users/federico/My project (3)/ARAP_implementation/build/_deps/libigl-subbuild/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/fedeb/Documents/GitHub/ARAP_implementation/build/_deps/libigl-subbuild -BC:/Users/fedeb/Documents/GitHub/ARAP_implementation/build/_deps/libigl-subbuild --check-stamp-file C:/Users/fedeb/Documents/GitHub/ARAP_implementation/build/_deps/libigl-subbuild/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

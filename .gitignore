@@ -80,3 +80,4 @@ build/Debug/MonProjetARAP.pdb
 build/MonProjetARAP.dir/Debug/main.obj
 build/MonProjetARAP.dir/Debug/MonProjetARAP.ilk
 build/MonProjetARAP.dir/Debug/vc143.pdb
+*.filters

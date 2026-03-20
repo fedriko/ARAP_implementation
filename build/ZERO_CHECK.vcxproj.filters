@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="C:\Users\federico\My project (3)\ARAP_implementation\build\CMakeFiles\f24cbf0230a3088a69146f696189ac16\generate.stamp.rule">
+    <CustomBuild Include="C:\Users\fedeb\Documents\GitHub\ARAP_implementation\build\CMakeFiles\723711f76e7f918057a59edf0e3be4f3\generate.stamp.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{FC2290FA-84BF-301D-94D5-FD90821F48CB}</UniqueIdentifier>
+      <UniqueIdentifier>{C3BCEC81-3872-339E-AB2D-CCB5CCEEE288}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

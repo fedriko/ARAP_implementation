@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/federico/My project (3)/ARAP_implementation
+# Install script for directory: C:/Users/fedeb/Documents/GitHub/ARAP_implementation
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files/Project")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files/ARAP_implementation")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,16 +34,38 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/federico/My project (3)/ARAP_implementation/build/_deps/libigl-build/cmake_install.cmake")
+  include("C:/Users/fedeb/Documents/GitHub/ARAP_implementation/build/_deps/libigl-build/cmake_install.cmake")
 endif()
 
-if(CMAKE_INSTALL_COMPONENT)
-  set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
-else()
-  set(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/Users/fedeb/Documents/GitHub/ARAP_implementation/build/_deps/glfw-build/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/Users/fedeb/Documents/GitHub/ARAP_implementation/build/_deps/glad-build/cmake_install.cmake")
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/federico/My project (3)/ARAP_implementation/build/${CMAKE_INSTALL_MANIFEST}"
+if(CMAKE_INSTALL_LOCAL_ONLY)
+  file(WRITE "C:/Users/fedeb/Documents/GitHub/ARAP_implementation/build/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
+endif()
+if(CMAKE_INSTALL_COMPONENT)
+  if(CMAKE_INSTALL_COMPONENT MATCHES "^[a-zA-Z0-9_.+-]+$")
+    set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
+  else()
+    string(MD5 CMAKE_INST_COMP_HASH "${CMAKE_INSTALL_COMPONENT}")
+    set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INST_COMP_HASH}.txt")
+    unset(CMAKE_INST_COMP_HASH)
+  endif()
+else()
+  set(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  file(WRITE "C:/Users/fedeb/Documents/GitHub/ARAP_implementation/build/${CMAKE_INSTALL_MANIFEST}"
+     "${CMAKE_INSTALL_MANIFEST_CONTENT}")
+endif()

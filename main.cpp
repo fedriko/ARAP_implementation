@@ -7,14 +7,12 @@
 #include <igl/readOFF.h>
 #include <igl/opengl/glfw/Viewer.h>
 #include <igl/unproject_onto_mesh.h>
+#include <igl/project.h>
+#include <igl/unproject.h>
 
-Eigen::SparseMatrix<double, Eigen::RowMajor>  constructLaplace(const Eigen::SparseMatrix<double, Eigen::RowMajor> & w, std::vector<int> & map){
+Eigen::SparseMatrix<double, Eigen::RowMajor>  constructLaplace(const Eigen::SparseMatrix<double, Eigen::RowMajor> & w, std::vector<int> & map,int free){
     int n = w.cols();
 
-    //Compute once
-    int free = 0;
-    for (int i = 0; i < n; ++i)
-        if (map[i] != -1) free++;
     Eigen::SparseMatrix<double, Eigen::RowMajor> L(free,free);
     std::vector<Eigen::Triplet<double>> triplets;
     triplets.reserve(n);
@@ -130,99 +128,166 @@ std::vector<Eigen::Vector3d> computeB(const Eigen::MatrixXd & V_1, const Eigen::
 }
 
 int main(){
+
     Eigen::MatrixXd V_1;
     Eigen::MatrixXd V_2;
     Eigen::MatrixXi F;
+    int numberOfPasses = 10;
 
     igl::readOFF("dino.off",V_1,F);
     V_2 = V_1;
+    int n = V_1.rows();
+
     igl::opengl::glfw::Viewer viewer;
-    std::set<int> anchors;
-    std::set<int> moved;
+
+    std::unordered_map<int, Eigen::RowVector3d> constrained_pos;
 
     viewer.data().set_mesh(V_1, F);
+    int active_handle = -1;
+    bool dragging = false;
+
+    Eigen::RowVector3d drag_start_pos(0.0, 0.0, 0.0);
+    double drag_depth = 0.0;
+
+    auto redraw_constraints = [&]() {
+    viewer.data().clear_points();
+
+    Eigen::MatrixXd P(constrained_pos.size(), 3);
+    Eigen::MatrixXd C(constrained_pos.size(), 3);
+
+    int k = 0;
+    for (const auto& [vid, pos] : constrained_pos) {
+        P.row(k) = pos;
+        C.row(k) = Eigen::RowVector3d(1, 0, 0);
+        ++k;
+    }
+
+    viewer.data().add_points(P, C);
+};
     
     viewer.callback_mouse_down =
-        [&](igl::opengl::glfw::Viewer& viewer, int button, int modifier) -> bool
+    [&](igl::opengl::glfw::Viewer& viewer, int button, int modifier) -> bool
+{
+    int fid;
+    Eigen::Vector3f bc;
+
+    double x = viewer.current_mouse_x;
+    double y = viewer.core().viewport(3) - viewer.current_mouse_y;
+
+    if (igl::unproject_onto_mesh(
+            Eigen::Vector2f(x, y),
+            viewer.core().view,
+            viewer.core().proj,
+            viewer.core().viewport,
+            V_1,
+            F,
+            fid,
+            bc))
     {
-        int fid;
-        Eigen::Vector3f bc;
+        int max_idx;
+        bc.maxCoeff(&max_idx);
 
-        double x = viewer.current_mouse_x;
-        double y = viewer.core().viewport(3) - viewer.current_mouse_y;
+        int vid = F(fid, max_idx);
 
-        if (igl::unproject_onto_mesh(
-                Eigen::Vector2f(x, y),
-                viewer.core().view,
-                viewer.core().proj,
-                viewer.core().viewport,
-                V_1,
-                F,
-                fid,
-                bc))
-        {
-            int max_idx;
-            bc.maxCoeff(&max_idx);
-
-            int vid = F(fid, max_idx);
-
-            if (modifier == GLFW_MOD_SHIFT) {
-                anchors.insert(vid);
-                std::cout << "Anchor vertex: " << vid << std::endl;
-            } else if (modifier == GLFW_MOD_CONTROL) {
-                moved.insert(vid);
-                std::cout << "moved vertex: " << vid << std::endl;
-            } else {
-                std::cout << "Picked vertex: " << vid << std::endl;
-            }
-
-            Eigen::RowVector3d p = V_1.row(vid);
-            viewer.data().add_points(p, Eigen::RowVector3d(1,0,0));
+        if (modifier & GLFW_MOD_SHIFT) {
+            constrained_pos[vid] = V_1.row(vid);
+            redraw_constraints();
+            std::cout << "Anchor vertex: " << vid << std::endl;
             return true;
+        } else {
+            auto it = constrained_pos.find(vid);
+            if (it != constrained_pos.end()) {
+                active_handle = vid;
+                dragging = true;
+                drag_start_pos = it->second;
+         Eigen::Vector3f p = drag_start_pos.transpose().cast<float>();
+
+Eigen::Matrix4f view = viewer.core().view.cast<float>();
+Eigen::Matrix4f projm = viewer.core().proj.cast<float>();
+Eigen::Vector4f viewport = viewer.core().viewport.cast<float>();
+
+Eigen::Vector3f proj = igl::project(p, view, projm, viewport);
+drag_depth = proj(2);
+                std::cout << "Dragging handle: " << vid << std::endl;
+                return true;
+            }
         }
+    }
 
+    return false;
+};
+
+
+    viewer.callback_mouse_move =
+    [&](igl::opengl::glfw::Viewer& viewer, int mouse_x, int mouse_y) -> bool
+{
+    if (!dragging || active_handle == -1)
         return false;
-    };
 
-   
+    double x = viewer.current_mouse_x;
+    double y = viewer.core().viewport(3) - viewer.current_mouse_y;
+
+Eigen::Matrix4f view = viewer.core().view.cast<float>();
+Eigen::Matrix4f projm = viewer.core().proj.cast<float>();
+Eigen::Vector4f viewport = viewer.core().viewport.cast<float>();
+
+Eigen::Vector3f win;
+win << static_cast<float>(x),
+       static_cast<float>(y),
+       static_cast<float>(drag_depth);
+
+Eigen::Vector3f obj = igl::unproject(win, view, projm, viewport);
+
+constrained_pos[active_handle] = obj.cast<double>().transpose();
+
+    redraw_constraints();
+
+    return true;
+};
+
+viewer.callback_mouse_up =
+    [&](igl::opengl::glfw::Viewer& viewer, int button, int modifier) -> bool
+{
+    dragging = false;
+    active_handle = -1;
+    return false;
+};
     viewer.launch();
 
-
-
-    int n = V_1.rows();
     Eigen::SparseMatrix<double, Eigen::RowMajor> W = constructWeights(V_1,F);
 
     std::vector<int> map(n, -1); 
     int indx = 0;
     for(int i = 0; i < n; i++){
-        bool is_constrained =
-        anchors.find(i) != anchors.end() || moved.find(i) != moved.end(); 
+        bool is_constrained =constrained_pos.find(i) != constrained_pos.end() ;
         if(!is_constrained){
             map[i] = indx;
             indx++;
         }
     }
 
-    auto L = constructLaplace(W,map);
+    int free = 0;
+    for (int i = 0; i < n; ++i)
+        if (map[i] != -1) free++;
 
-    for(int a : moved){
-        V_2.row(a) += Eigen::RowVector3d(0,0,0.5);
+    auto L = constructLaplace(W,map,free);
+
+    for(const auto& [i, pos] : constrained_pos){
+        V_2.row(i) = pos;
     }
 
     Eigen::SimplicialLLT<Eigen::SparseMatrix<double>> solver;
     Eigen::SparseMatrix<double> Lcol = L;
     solver.analyzePattern(Lcol);
     solver.factorize(Lcol);
+
     if (solver.info() != Eigen::Success) {
-    std::cout << "Factorization failed\n";
-}
-    int free = 0;
-    for (int i = 0; i < n; ++i)
-        if (map[i] != -1) free++;
+        std::cout << "Factorization failed\n";
+    }
 
     Eigen::VectorXd bx(free),by(free),bz(free);
 
-    for(int iter = 0; iter < 15; ++iter){
+    for(int iter = 0; iter < numberOfPasses; ++iter){
 
         std::vector<Eigen::Matrix3d> R;
         R.resize(n);
@@ -230,6 +295,7 @@ int main(){
         for(int i=0; i<n; i++){
             R[i] = computeRotation(i,V_1,V_2,W);
         }
+
         auto b = computeB(V_1,W,R);
     
         
@@ -240,18 +306,16 @@ int main(){
 
             Eigen::Vector3d bi = b[i];
 
+            // Add contributions from constrained vertices
             for (Eigen::SparseMatrix<double, Eigen::RowMajor> ::InnerIterator  it(W, i); it; ++it) {
                 int j = it.col();
                 double w_ij = it.value();
 
                 if (map[j] == -1) {
                     Eigen::Vector3d cj;
-                    if (anchors.find(j) != anchors.end())
-                        cj = V_1.row(j).transpose();
-                    else if (moved.find(j) != moved.end())
-                        cj = V_1.row(j).transpose() + Eigen::Vector3d(0,0,0.5);
+                   
 
-                    bi += w_ij * cj;
+                    bi += w_ij * constrained_pos[j].transpose();
                 }
             }
 
@@ -260,50 +324,26 @@ int main(){
             bz(ii) = bi(2);
         }
     
-            
- 
-
+    
         Eigen::VectorXd x = solver.solve(bx);
         Eigen::VectorXd y = solver.solve(by);
         Eigen::VectorXd z = solver.solve(bz);
 
        for(int i = 0; i < n; i++) {
-       if (map[i] == -1) {
-                    Eigen::Vector3d ci;
-                    if (anchors.find(i) != anchors.end())
-                         ci = V_1.row(i).transpose();
-                    else if (moved.find(i) != moved.end())
-                        ci = V_1.row(i).transpose() + Eigen::Vector3d(0,0,0.5);
-        V_2.row(i) = ci.transpose();
-       }else{
+       if (map[i] != -1) {
          int ii = map[i];
         V_2(i,0) = x(ii);
         V_2(i,1) = y(ii);
         V_2(i,2) = z(ii);
        }
     }
-        std::cout << "solve info x: " << (solver.info() == Eigen::Success) << std::endl;
-        std::cout << "solve info y: " << (solver.info() == Eigen::Success) << std::endl;
-        std::cout << "solve info z: " << (solver.info() == Eigen::Success) << std::endl;
-
-        std::cout << "x finite: " << x.allFinite() << std::endl;
-        std::cout << "y finite: " << y.allFinite() << std::endl;
-        std::cout << "z finite: " << z.allFinite() << std::endl;
-
-        std::cout << "max |x| = " << x.cwiseAbs().maxCoeff() << std::endl;
-        std::cout << "max |y| = " << y.cwiseAbs().maxCoeff() << std::endl;
-        std::cout << "max |z| = " << z.cwiseAbs().maxCoeff() << std::endl;
-     
+      
 }    
        
-    std::cout << "V_2 finite: " << V_2.allFinite() << std::endl;
-    std::cout << "max |V_2| = " << V_2.cwiseAbs().maxCoeff() << std::endl;
+
     igl::opengl::glfw::Viewer viewer2;
     viewer2.data().set_mesh(V_2, F);
     viewer2.data().compute_normals();
     viewer2.launch();
-    Eigen::SparseMatrix<double, Eigen::RowMajor> LT = L.transpose();
-    Eigen::MatrixXd diff = Eigen::MatrixXd(L - LT);
-    std::cout << "symmetry error = " << diff.norm() << std::endl;
     return 0;
 }

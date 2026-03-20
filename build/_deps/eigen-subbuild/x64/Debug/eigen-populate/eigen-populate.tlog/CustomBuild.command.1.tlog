@@ -1,8 +1,8 @@
-^C:\USERS\FEDERICO\MY PROJECT (3)\ARAP_IMPLEMENTATION\BUILD\_DEPS\EIGEN-SUBBUILD\CMAKEFILES\003738CE0FEC1E90809100132032D40A\EIGEN-POPULATE-MKDIR.RULE
+^C:\USERS\FEDEB\DOCUMENTS\GITHUB\ARAP_IMPLEMENTATION\BUILD\_DEPS\EIGEN-SUBBUILD\CMAKEFILES\3E49FE9368D754140CF5421DEBEA718D\EIGEN-POPULATE-MKDIR.RULE
 setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -Dcfgdir=/Debug -P "C:/Users/federico/My project (3)/ARAP_implementation/build/_deps/eigen-subbuild/eigen-populate-prefix/tmp/eigen-populate-mkdirs.cmake"
+"C:\Program Files\CMake\bin\cmake.exe" -Dcfgdir=/Debug -P C:/Users/fedeb/Documents/GitHub/ARAP_implementation/build/_deps/eigen-subbuild/eigen-populate-prefix/tmp/eigen-populate-mkdirs.cmake
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch "C:/Users/federico/My project (3)/ARAP_implementation/build/_deps/eigen-subbuild/eigen-populate-prefix/src/eigen-populate-stamp/Debug/eigen-populate-mkdir"
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/fedeb/Documents/GitHub/ARAP_implementation/build/_deps/eigen-subbuild/eigen-populate-prefix/src/eigen-populate-stamp/Debug/eigen-populate-mkdir
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
@@ -10,15 +10,15 @@ endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
-^C:\USERS\FEDERICO\MY PROJECT (3)\ARAP_IMPLEMENTATION\BUILD\_DEPS\EIGEN-SUBBUILD\CMAKEFILES\003738CE0FEC1E90809100132032D40A\EIGEN-POPULATE-DOWNLOAD.RULE
+^C:\USERS\FEDEB\DOCUMENTS\GITHUB\ARAP_IMPLEMENTATION\BUILD\_DEPS\EIGEN-SUBBUILD\CMAKEFILES\3E49FE9368D754140CF5421DEBEA718D\EIGEN-POPULATE-DOWNLOAD.RULE
 setlocal
-cd "C:\Users\federico\My project (3)\ARAP_implementation\build\_deps"
+cd C:\Users\fedeb\Documents\GitHub\ARAP_implementation\build\_deps
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P "C:/Users/federico/My project (3)/ARAP_implementation/build/_deps/eigen-subbuild/eigen-populate-prefix/tmp/eigen-populate-gitclone.cmake"
+"C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P C:/Users/fedeb/Documents/GitHub/ARAP_implementation/build/_deps/eigen-subbuild/eigen-populate-prefix/tmp/eigen-populate-gitclone.cmake
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch "C:/Users/federico/My project (3)/ARAP_implementation/build/_deps/eigen-subbuild/eigen-populate-prefix/src/eigen-populate-stamp/Debug/eigen-populate-download"
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/fedeb/Documents/GitHub/ARAP_implementation/build/_deps/eigen-subbuild/eigen-populate-prefix/src/eigen-populate-stamp/Debug/eigen-populate-download
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
@@ -26,13 +26,13 @@ endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
-^C:\USERS\FEDERICO\MY PROJECT (3)\ARAP_IMPLEMENTATION\BUILD\_DEPS\EIGEN-SUBBUILD\CMAKEFILES\003738CE0FEC1E90809100132032D40A\EIGEN-POPULATE-UPDATE.RULE
+^C:\USERS\FEDEB\DOCUMENTS\GITHUB\ARAP_IMPLEMENTATION\BUILD\_DEPS\EIGEN-SUBBUILD\CMAKEFILES\3E49FE9368D754140CF5421DEBEA718D\EIGEN-POPULATE-UPDATE.RULE
 setlocal
-cd "C:\Users\federico\My project (3)\ARAP_implementation\build\_deps\eigen-src"
+cd C:\Users\fedeb\Documents\GitHub\ARAP_implementation\build\_deps\eigen-src
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -Dcan_fetch=YES -P "C:/Users/federico/My project (3)/ARAP_implementation/build/_deps/eigen-subbuild/eigen-populate-prefix/tmp/eigen-populate-gitupdate.cmake"
+"C:\Program Files\CMake\bin\cmake.exe" -Dcan_fetch=YES -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P C:/Users/fedeb/Documents/GitHub/ARAP_implementation/build/_deps/eigen-subbuild/eigen-populate-prefix/tmp/eigen-populate-gitupdate.cmake
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
@@ -40,11 +40,11 @@ endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
-^C:\USERS\FEDERICO\MY PROJECT (3)\ARAP_IMPLEMENTATION\BUILD\_DEPS\EIGEN-SUBBUILD\CMAKEFILES\003738CE0FEC1E90809100132032D40A\EIGEN-POPULATE-PATCH.RULE
+^C:\USERS\FEDEB\DOCUMENTS\GITHUB\ARAP_IMPLEMENTATION\BUILD\_DEPS\EIGEN-SUBBUILD\CMAKEFILES\3E49FE9368D754140CF5421DEBEA718D\EIGEN-POPULATE-PATCH.RULE
 setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch "C:/Users/federico/My project (3)/ARAP_implementation/build/_deps/eigen-subbuild/eigen-populate-prefix/src/eigen-populate-stamp/Debug/eigen-populate-patch"
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/fedeb/Documents/GitHub/ARAP_implementation/build/_deps/eigen-subbuild/eigen-populate-prefix/src/eigen-populate-stamp/Debug/eigen-populate-patch
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
@@ -52,15 +52,15 @@ endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
-^C:\USERS\FEDERICO\MY PROJECT (3)\ARAP_IMPLEMENTATION\BUILD\_DEPS\EIGEN-SUBBUILD\CMAKEFILES\003738CE0FEC1E90809100132032D40A\EIGEN-POPULATE-CONFIGURE.RULE
+^C:\USERS\FEDEB\DOCUMENTS\GITHUB\ARAP_IMPLEMENTATION\BUILD\_DEPS\EIGEN-SUBBUILD\CMAKEFILES\3E49FE9368D754140CF5421DEBEA718D\EIGEN-POPULATE-CONFIGURE.RULE
 setlocal
-cd "C:\Users\federico\My project (3)\ARAP_implementation\build\_deps\eigen-build"
+cd C:\Users\fedeb\Documents\GitHub\ARAP_implementation\build\_deps\eigen-build
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch "C:/Users/federico/My project (3)/ARAP_implementation/build/_deps/eigen-subbuild/eigen-populate-prefix/src/eigen-populate-stamp/Debug/eigen-populate-configure"
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/fedeb/Documents/GitHub/ARAP_implementation/build/_deps/eigen-subbuild/eigen-populate-prefix/src/eigen-populate-stamp/Debug/eigen-populate-configure
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
@@ -68,15 +68,15 @@ endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
-^C:\USERS\FEDERICO\MY PROJECT (3)\ARAP_IMPLEMENTATION\BUILD\_DEPS\EIGEN-SUBBUILD\CMAKEFILES\003738CE0FEC1E90809100132032D40A\EIGEN-POPULATE-BUILD.RULE
+^C:\USERS\FEDEB\DOCUMENTS\GITHUB\ARAP_IMPLEMENTATION\BUILD\_DEPS\EIGEN-SUBBUILD\CMAKEFILES\3E49FE9368D754140CF5421DEBEA718D\EIGEN-POPULATE-BUILD.RULE
 setlocal
-cd "C:\Users\federico\My project (3)\ARAP_implementation\build\_deps\eigen-build"
+cd C:\Users\fedeb\Documents\GitHub\ARAP_implementation\build\_deps\eigen-build
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch "C:/Users/federico/My project (3)/ARAP_implementation/build/_deps/eigen-subbuild/eigen-populate-prefix/src/eigen-populate-stamp/Debug/eigen-populate-build"
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/fedeb/Documents/GitHub/ARAP_implementation/build/_deps/eigen-subbuild/eigen-populate-prefix/src/eigen-populate-stamp/Debug/eigen-populate-build
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
@@ -84,15 +84,15 @@ endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
-^C:\USERS\FEDERICO\MY PROJECT (3)\ARAP_IMPLEMENTATION\BUILD\_DEPS\EIGEN-SUBBUILD\CMAKEFILES\003738CE0FEC1E90809100132032D40A\EIGEN-POPULATE-INSTALL.RULE
+^C:\USERS\FEDEB\DOCUMENTS\GITHUB\ARAP_IMPLEMENTATION\BUILD\_DEPS\EIGEN-SUBBUILD\CMAKEFILES\3E49FE9368D754140CF5421DEBEA718D\EIGEN-POPULATE-INSTALL.RULE
 setlocal
-cd "C:\Users\federico\My project (3)\ARAP_implementation\build\_deps\eigen-build"
+cd C:\Users\fedeb\Documents\GitHub\ARAP_implementation\build\_deps\eigen-build
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch "C:/Users/federico/My project (3)/ARAP_implementation/build/_deps/eigen-subbuild/eigen-populate-prefix/src/eigen-populate-stamp/Debug/eigen-populate-install"
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/fedeb/Documents/GitHub/ARAP_implementation/build/_deps/eigen-subbuild/eigen-populate-prefix/src/eigen-populate-stamp/Debug/eigen-populate-install
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
@@ -100,29 +100,15 @@ endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
-^C:\USERS\FEDERICO\MY PROJECT (3)\ARAP_IMPLEMENTATION\BUILD\_DEPS\EIGEN-SUBBUILD\CMAKEFILES\003738CE0FEC1E90809100132032D40A\EIGEN-POPULATE-TEST.RULE
+^C:\USERS\FEDEB\DOCUMENTS\GITHUB\ARAP_IMPLEMENTATION\BUILD\_DEPS\EIGEN-SUBBUILD\CMAKEFILES\3E49FE9368D754140CF5421DEBEA718D\EIGEN-POPULATE-TEST.RULE
 setlocal
-cd "C:\Users\federico\My project (3)\ARAP_implementation\build\_deps\eigen-build"
+cd C:\Users\fedeb\Documents\GitHub\ARAP_implementation\build\_deps\eigen-build
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo_append
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch "C:/Users/federico/My project (3)/ARAP_implementation/build/_deps/eigen-subbuild/eigen-populate-prefix/src/eigen-populate-stamp/Debug/eigen-populate-test"
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-^C:\USERS\FEDERICO\MY PROJECT (3)\ARAP_IMPLEMENTATION\BUILD\_DEPS\EIGEN-SUBBUILD\CMAKEFILES\127239596B5D9A17E145D8EA9F232286\EIGEN-POPULATE-COMPLETE.RULE
-setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory "C:/Users/federico/My project (3)/ARAP_implementation/build/_deps/eigen-subbuild/CMakeFiles/Debug"
-if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch "C:/Users/federico/My project (3)/ARAP_implementation/build/_deps/eigen-subbuild/CMakeFiles/Debug/eigen-populate-complete"
-if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E touch "C:/Users/federico/My project (3)/ARAP_implementation/build/_deps/eigen-subbuild/eigen-populate-prefix/src/eigen-populate-stamp/Debug/eigen-populate-done"
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/fedeb/Documents/GitHub/ARAP_implementation/build/_deps/eigen-subbuild/eigen-populate-prefix/src/eigen-populate-stamp/Debug/eigen-populate-test
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
@@ -130,7 +116,21 @@ endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
-^C:\USERS\FEDERICO\MY PROJECT (3)\ARAP_IMPLEMENTATION\BUILD\_DEPS\EIGEN-SUBBUILD\CMAKEFILES\A41819E8B8BC95BB794BB722B726815D\EIGEN-POPULATE.RULE
+^C:\USERS\FEDEB\DOCUMENTS\GITHUB\ARAP_IMPLEMENTATION\BUILD\_DEPS\EIGEN-SUBBUILD\CMAKEFILES\639AC2CCF55660E75601800DC53AD4DE\EIGEN-POPULATE-COMPLETE.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/Users/fedeb/Documents/GitHub/ARAP_implementation/build/_deps/eigen-subbuild/CMakeFiles/Debug
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/fedeb/Documents/GitHub/ARAP_implementation/build/_deps/eigen-subbuild/CMakeFiles/Debug/eigen-populate-complete
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/fedeb/Documents/GitHub/ARAP_implementation/build/_deps/eigen-subbuild/eigen-populate-prefix/src/eigen-populate-stamp/Debug/eigen-populate-done
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\FEDEB\DOCUMENTS\GITHUB\ARAP_IMPLEMENTATION\BUILD\_DEPS\EIGEN-SUBBUILD\CMAKEFILES\226BB3571C945E6317BE99224C10ACB5\EIGEN-POPULATE.RULE
 setlocal
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
@@ -138,9 +138,9 @@ endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
-^C:\USERS\FEDERICO\MY PROJECT (3)\ARAP_IMPLEMENTATION\BUILD\_DEPS\EIGEN-SUBBUILD\CMAKELISTS.TXT
+^C:\USERS\FEDEB\DOCUMENTS\GITHUB\ARAP_IMPLEMENTATION\BUILD\_DEPS\EIGEN-SUBBUILD\CMAKELISTS.TXT
 setlocal
-"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" "-SC:/Users/federico/My project (3)/ARAP_implementation/build/_deps/eigen-subbuild" "-BC:/Users/federico/My project (3)/ARAP_implementation/build/_deps/eigen-subbuild" --check-stamp-file "C:/Users/federico/My project (3)/ARAP_implementation/build/_deps/eigen-subbuild/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/fedeb/Documents/GitHub/ARAP_implementation/build/_deps/eigen-subbuild -BC:/Users/fedeb/Documents/GitHub/ARAP_implementation/build/_deps/eigen-subbuild --check-stamp-file C:/Users/fedeb/Documents/GitHub/ARAP_implementation/build/_deps/eigen-subbuild/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
